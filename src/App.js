@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+//import Manufacturer from './components/Manufacturer';
+import { Route, Routes } from "react-router-dom";
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import ProductRegistryCmp from './components/ProductRegistry';
+import ClientSpace from './components/ClientSpace';
+import Service from './components/Service';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="navbar">
+      <Navbar />
     </div>
+    <div className="main-content">
+      <Routes>
+        <Route index path="/" element={<Home />} />
+        <Route path="/Manufacturer_space" element={<ProductRegistryCmp />} />
+        <Route path="/Customer_space" element={<ClientSpace />} />
+        <Route path="/Service" element={<Service />} />
+      </Routes>
+      </div>
+    </>
   );
 }
 

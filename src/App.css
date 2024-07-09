@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top of other elements */
+}
+
+.main-content {
+  padding-top: 80px; 
+}
